@@ -18,6 +18,11 @@ CHugeInt::CHugeInt(const char *str) {
 
 // operator reload function
 
+void my_test_function() {
+    int* p = NULL; // Clang-Tidy 会建议你用 nullptr (modernize-use-nullptr)
+    int unused_var = 10; // 它会提示变量未被使用 (unused-variable)
+}
+
 // HelpFunction, add two string
 void MyAddForString(string& result, string& num_str) {
 
@@ -52,6 +57,7 @@ void MyAddForString(string& result, string& num_str) {
 
 // class + num
 const CHugeInt CHugeInt::operator+(int num) const {
+    int x = 10;
     string num_str = to_string(num);
     string result;
     if(s.size() > num_str.size()) {
@@ -76,7 +82,7 @@ const CHugeInt CHugeInt::operator+(const CHugeInt& right) const {
     else {
         result = right.s;
         num_str = s;
-    }
+    } 
     MyAddForString(result, num_str);
 
     return CHugeInt(result.c_str());
