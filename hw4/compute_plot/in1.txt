@@ -1,0 +1,9 @@
+8
+Constant 3
+Constant 2
+Plus 1 2
+Plus 3 2
+Print 3
+Print 5
+Modify 1 100
+Print 1
