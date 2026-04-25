@@ -24,13 +24,13 @@ Tarnished::~Tarnished() {
     }
 
     int i = 0;
-    while (normal_weapons[i] != nullptr)
+    while (normal_weapons[i] != nullptr && i < MAX_WEAPONS)
     {
         delete normal_weapons[i];
         ++i;
     }
     i = 0;
-    while (somber_weapons[i] != nullptr)
+    while (somber_weapons[i] != nullptr && i < MAX_WEAPONS)
     {
         delete somber_weapons[i];
         ++i;
@@ -177,6 +177,7 @@ void Tarnished::upgrade_weapon(int target, string name) {
             else {
                 // 暂时还够用
                 grade_temp++;
+                curr_level = grade_temp+1;
             }
         }
     }
