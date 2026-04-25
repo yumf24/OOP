@@ -1,7 +1,8 @@
 #include "normal_weapon.h"
 #include <iostream>
 #include <string>
-using std::cout, std::endl;
+using std::cout;
+using std::endl;
 
 NormalWeapon::NormalWeapon(string name): Weapon(name), grade(0) {
     cout << "Normal weapon " << name << " was created." << endl;
@@ -21,6 +22,10 @@ int NormalWeapon::get_level() const {
     return Weapon::get_level();
 }
 
+int NormalWeapon::get_grade() const {
+    return grade;
+}
+
 void NormalWeapon::upgrade() {
     Weapon::upgrade();
     string old_extended_name = "", new_extended_name = "";
@@ -28,5 +33,5 @@ void NormalWeapon::upgrade() {
     new_extended_name = "+" + std::to_string(++grade);
     string base_name = get_name();
     string old_name = base_name+old_extended_name, new_name = base_name+new_extended_name;
-    cout << "Normal weapon " << old_name << " was upgraded to " << new_name << endl;
+    cout << "Normal weapon " << old_name << " was upgraded to " << new_name << "." << endl;
 }

@@ -6,7 +6,7 @@ SomberSmithingStone::SomberSmithingStone(int level): SmithingStone(level) {
 }
 
 SomberSmithingStone::~SomberSmithingStone() {
-    std::cout << "Somber smithing " << get_level() << " was destroyed." << std::endl;
+    std::cout << "Somber smithing stone " << get_level() << " was destroyed." << std::endl;
 }
 
 void SomberSmithingStone::add_amount(int amount) {
@@ -15,7 +15,7 @@ void SomberSmithingStone::add_amount(int amount) {
     if(amount >= 0) {
         std::cout << "Somber smithing stone " << get_level() << " was added with " << amount << "." << std::endl;
     } else {
-        std::cout << "Somber smithing stone " << get_level() << " was subtracted with " << amount << "." << std::endl;
+        std::cout << "Somber smithing stone " << get_level() << " was subtracted with " << -amount << "." << std::endl;
     }
 }
 

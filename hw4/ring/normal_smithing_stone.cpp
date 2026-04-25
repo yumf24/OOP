@@ -7,7 +7,7 @@ NormalSmithingStone::NormalSmithingStone(int level): SmithingStone(level) {
 }
 
 NormalSmithingStone::~NormalSmithingStone() {
-    std::cout << "Normal smithing " << get_level() << " was destroyed." << std::endl;
+    std::cout << "Normal smithing stone " << get_level() << " was destroyed." << std::endl;
 }
 
 void NormalSmithingStone::add_amount(int amount) {
@@ -16,7 +16,7 @@ void NormalSmithingStone::add_amount(int amount) {
     if(amount >= 0) {
         std::cout << "Normal smithing stone " << get_level() << " was added with " << amount << "." << std::endl;
     } else {
-        std::cout << "Normal smithing stone " << get_level() << " was subtracted with " << amount << "." << std::endl;
+        std::cout << "Normal smithing stone " << get_level() << " was subtracted with " << -amount << "." << std::endl;
     }
 }
 

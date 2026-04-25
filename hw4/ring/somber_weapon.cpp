@@ -1,7 +1,8 @@
 #include "somber_weapon.h"
 #include <iostream>
 #include <string>
-using std::cout, std::endl;
+using std::cout;
+using std::endl;
 
 SomberWeapon::SomberWeapon(string name): Weapon(name), grade(0) {
     cout << "Somber weapon " << name << " was created." << endl;
@@ -21,6 +22,10 @@ int SomberWeapon::get_level() const {
     return Weapon::get_level();
 }
 
+int SomberWeapon::get_grade() const {
+    return grade;
+}
+
 void SomberWeapon::upgrade() {
     Weapon::upgrade();
     string old_extended_name = "", new_extended_name = "";
@@ -28,5 +33,5 @@ void SomberWeapon::upgrade() {
     new_extended_name = "+" + std::to_string(++grade);
     string base_name = get_name();
     string old_name = base_name+old_extended_name, new_name = base_name+new_extended_name;
-    cout << "Somber weapon " << old_name << " was upgraded to " << new_name << endl;
+    cout << "Somber weapon " << old_name << " was upgraded to " << new_name << "." << endl;
 }
