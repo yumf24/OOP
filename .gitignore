@@ -6,3 +6,5 @@ main_debug
 
 .vscode
 .vscode/*
+
+.DS_Store
