@@ -1,0 +1,11 @@
+vector string
+8
+insert 4 3 Bob
+insert 3 4 Alice
+insert 6 2 Peter
+insert 3 1 Liu
+find 3 2
+find 4 3
+find 3 1
+find 6 1
+
